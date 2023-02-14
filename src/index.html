@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=Ubuntu:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <style type="text/tailwindcss">
       .primary-color {
         color: #002d44;
@@ -36,6 +37,22 @@
 
       .card-container {
         min-height: 300px;
+      }
+
+      #mobileNavbar {
+        transition: transform 0.5s ease-in-out;
+        z-index: 90;
+      }
+
+      .togglerr {
+        cursor: pointer;
+        z-index: 100;
+      }
+
+      #overlay {
+        z-index: 80;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
       }
     </style>
     <!-- <link href="/dist/output.css" rel="stylesheet" /> -->
@@ -58,7 +75,6 @@
       <nav
         class="container mx-auto flex flex-row justify-between py-2 px-4 md:px-8 lg:px-16"
       >
-        <div id="togglerr" class="h-7 w-7 bg-black"></div>
         <div class="logo h-9 w-9 flex justify-center items-center">
           <img src="../media/logo.png" alt="" />
         </div>
@@ -93,7 +109,9 @@
           ></a>
         </div>
 
-        <div class="flex justify-center items-center md:hidden primary-color">
+        <div
+          class="togglerr flex justify-center items-center md:hidden primary-color"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -109,45 +127,49 @@
             />
           </svg>
         </div>
-      </nav>
-    </div>
 
-    <!-- mobile nav -->
-    <div
-      class="fixed right-0 transform translate-x-full top-0 flex flex-col shadow-sm w-full h-screen sm:w-2/3 font-poppins justify-center items-center bg-red-600"
-    >
-      <div class="h-4/5 p-3 flex justify-center items-center">
-        <ul
-          class="flex flex-col justify-center items-center gap-2 text-center primary-color"
+        <div
+          id="mobileNavbar"
+          class="fixed right-0 transform translate-x-full top-0 md:hidden flex flex-col shadow-lg w-full h-screen sm:w-2/3 font-poppins text-sm justify-center items-center bg-white"
         >
-          <li><a href="#home">Home</a></li>
-          <li><a href="#departments">Departments</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#about">About Us</a></li>
-        </ul>
-      </div>
-      <div class="h-1/5">
-        <div class="social-media hidden md:flex text-xs flex-row gap-3">
-          <a href="#"
-            ><div
-              class="h-7 w-7 bg-slate-200 hover:bg-slate-300 transition-all ease-in-out primary-color rounded-full flex justify-center items-center"
+          <div class="h-4/5 p-3 flex justify-center items-center">
+            <ul
+              class="flex flex-col justify-center items-center gap-2 text-center primary-color"
             >
-              <i class="fa-brands fa-facebook-f"></i></div
-          ></a>
-          <a href="#"
-            ><div
-              class="h-7 w-7 bg-slate-200 hover:bg-slate-300 transition ease-in-out primary-color rounded-full flex justify-center items-center"
-            >
-              <i class="fa-brands fa-youtube"></i></div
-          ></a>
-          <a href="#"
-            ><div
-              class="h-7 w-7 bg-slate-200 hover:bg-slate-300 transition ease-in-out primary-color rounded-full flex justify-center items-center"
-            >
-              <i class="fa-brands fa-telegram"></i></div
-          ></a>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#departments">Departments</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#about">About Us</a></li>
+            </ul>
+          </div>
+          <div class="h-1/5">
+            <div class="social-media flex text-xs flex-row gap-3">
+              <a href="#"
+                ><div
+                  class="h-7 w-7 bg-slate-200 hover:bg-slate-300 transition-all ease-in-out primary-color rounded-full flex justify-center items-center"
+                >
+                  <i class="fa-brands fa-facebook-f"></i></div
+              ></a>
+              <a href="#"
+                ><div
+                  class="h-7 w-7 bg-slate-200 hover:bg-slate-300 transition ease-in-out primary-color rounded-full flex justify-center items-center"
+                >
+                  <i class="fa-brands fa-youtube"></i></div
+              ></a>
+              <a href="#"
+                ><div
+                  class="h-7 w-7 bg-slate-200 hover:bg-slate-300 transition ease-in-out primary-color rounded-full flex justify-center items-center"
+                >
+                  <i class="fa-brands fa-telegram"></i></div
+              ></a>
+            </div>
+          </div>
         </div>
-      </div>
+        <div
+          id="overlay"
+          class="fixed md:hidden right-0 top-0 h-screen w-full bg-slate-800 hidden"
+        ></div>
+      </nav>
     </div>
 
     <section
@@ -180,117 +202,127 @@
       </div>
     </section>
 
-    <section
-      class="container mx-auto flex flex-col text-center font-poppins lg:text-start gap-6 mb-10"
-    >
+    <section class="bg-slate-100">
       <div
-        class="w-full flex flex-col md:flex-row-reverse gap-10 p-0 lg:p-8 my-6 lg:my-10"
+        class="container mx-auto flex flex-col text-center font-poppins lg:text-start gap-6 mb-10"
       >
-        <div class="content-container flex justify-center items-center w-full">
-          <div class="content w-4/6">
-            <h1 class="text-4xl primary-color pb-4 font-extrabold">iWeb</h1>
-            <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
-              Carries the most up to date Web Technologies for Afghan Students
-            </h3>
-            <p class="text-sm text-gray-500 lg:pr-6 pb-6">
-              Our iWeb department with informative instructors have the mission
-              to carry out the best, high quality and up to date concepts of web
-              designing and web development principles.
-            </p>
-            <a
-              href="#"
-              class="px-5 py-2 inline-block mt-2 primary-background text-white font-medium rounded-md text-xs"
-              >Join in telegram</a
-            >
+        <div
+          class="w-full flex flex-col md:flex-row-reverse gap-10 p-0 lg:p-8 my-6 lg:my-10"
+        >
+          <div
+            class="content-container flex justify-center items-center w-full"
+          >
+            <div class="content w-4/6">
+              <h1 class="text-4xl primary-color pb-4 font-extrabold">iWeb</h1>
+              <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
+                Carries the most up to date Web Technologies for Afghan Students
+              </h3>
+              <p class="text-sm text-gray-500 lg:pr-6 pb-6">
+                Our iWeb department with informative instructors have the
+                mission to carry out the best, high quality and up to date
+                concepts of web designing and web development principles.
+              </p>
+              <a
+                href="#"
+                class="px-5 py-2 inline-block mt-2 primary-background text-white font-medium rounded-md text-xs"
+                >Join in telegram</a
+              >
+            </div>
+          </div>
+          <div class="img-container flex justify-center items-center w-full">
+            <div class="img w-4/6 rounded-lg overflow-hidden primary-shadow">
+              <img src="../media/iWeb.png" alt="" />
+            </div>
           </div>
         </div>
-        <div class="img-container flex justify-center items-center w-full">
-          <div class="img w-4/6 rounded-lg overflow-hidden primary-shadow">
-            <img src="../media/iWeb.png" alt="" />
-          </div>
-        </div>
-      </div>
 
-      <div
-        class="w-full flex flex-col md:flex-row gap-10 p-0 md:p-8 my-6 md:my-10"
-      >
-        <div class="content-container flex justify-center items-center w-full">
-          <div class="content w-4/6">
-            <h1 class="text-4xl primary-color pb-4 font-extrabold">iNet</h1>
-            <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
-              Carries the most up to date Web Technologies for Afghan Students
-            </h3>
-            <p class="text-sm text-gray-500 lg:pr-6 pb-6">
-              Our iWeb department with informative instructors have the mission
-              to carry out the best, high quality and up to date concepts of web
-              designing and web development principles.
-            </p>
-            <a
-              href="#"
-              class="px-5 py-2 inline-block mt-2 primary-background text-white font-medium rounded-md text-xs"
-              >Join in telegram</a
-            >
+        <div
+          class="w-full flex flex-col md:flex-row gap-10 p-0 md:p-8 my-6 md:my-10"
+        >
+          <div
+            class="content-container flex justify-center items-center w-full"
+          >
+            <div class="content w-4/6">
+              <h1 class="text-4xl primary-color pb-4 font-extrabold">iNet</h1>
+              <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
+                Carries the most up to date Web Technologies for Afghan Students
+              </h3>
+              <p class="text-sm text-gray-500 lg:pr-6 pb-6">
+                Our iWeb department with informative instructors have the
+                mission to carry out the best, high quality and up to date
+                concepts of web designing and web development principles.
+              </p>
+              <a
+                href="#"
+                class="px-5 py-2 inline-block mt-2 primary-background text-white font-medium rounded-md text-xs"
+                >Join in telegram</a
+              >
+            </div>
+          </div>
+          <div class="img-container flex justify-center items-center w-full">
+            <div class="img w-4/6 rounded-lg overflow-hidden primary-shadow">
+              <img src="../media/iNet.png" alt="" />
+            </div>
           </div>
         </div>
-        <div class="img-container flex justify-center items-center w-full">
-          <div class="img w-4/6 rounded-lg overflow-hidden primary-shadow">
-            <img src="../media/iNet.png" alt="" />
-          </div>
-        </div>
-      </div>
 
-      <div
-        class="w-full flex flex-col md:flex-row-reverse gap-10 p-0 md:p-8 my-6 md:my-10"
-      >
-        <div class="content-container flex justify-center items-center w-full">
-          <div class="content w-4/6">
-            <h1 class="text-4xl primary-color pb-4 font-extrabold">iSec</h1>
-            <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
-              Carries the most up to date Web Technologies for Afghan Students
-            </h3>
-            <p class="text-sm text-gray-500 lg:pr-6 pb-6">
-              Our iWeb department with informative instructors have the mission
-              to carry out the best, high quality and up to date concepts of web
-              designing and web development principles.
-            </p>
-            <a
-              href="#"
-              class="px-5 py-2 inline-block mt-2 primary-background text-white font-medium rounded-md text-xs"
-              >Join in telegram</a
-            >
+        <div
+          class="w-full flex flex-col md:flex-row-reverse gap-10 p-0 md:p-8 my-6 md:my-10"
+        >
+          <div
+            class="content-container flex justify-center items-center w-full"
+          >
+            <div class="content w-4/6">
+              <h1 class="text-4xl primary-color pb-4 font-extrabold">iSec</h1>
+              <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
+                Carries the most up to date Web Technologies for Afghan Students
+              </h3>
+              <p class="text-sm text-gray-500 lg:pr-6 pb-6">
+                Our iWeb department with informative instructors have the
+                mission to carry out the best, high quality and up to date
+                concepts of web designing and web development principles.
+              </p>
+              <a
+                href="#"
+                class="px-5 py-2 inline-block mt-2 primary-background text-white font-medium rounded-md text-xs"
+                >Join in telegram</a
+              >
+            </div>
+          </div>
+          <div class="img-container flex justify-center items-center w-full">
+            <div class="img w-4/6 rounded-lg overflow-hidden primary-shadow">
+              <img src="../media/iSec.png" alt="" />
+            </div>
           </div>
         </div>
-        <div class="img-container flex justify-center items-center w-full">
-          <div class="img w-4/6 rounded-lg overflow-hidden primary-shadow">
-            <img src="../media/iSec.png" alt="" />
-          </div>
-        </div>
-      </div>
 
-      <div
-        class="w-full flex flex-col md:flex-row gap-10 p-0 md:p-8 my-6 md:my-10"
-      >
-        <div class="content-container flex justify-center items-center w-full">
-          <div class="content w-4/6">
-            <h1 class="text-4xl primary-color pb-4 font-extrabold">iSoft</h1>
-            <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
-              Carries the most up to date Web Technologies for Afghan Students
-            </h3>
-            <p class="text-sm text-gray-500 lg:pr-6 pb-6">
-              Our iWeb department with informative instructors have the mission
-              to carry out the best, high quality and up to date concepts of web
-              designing and web development principles.
-            </p>
-            <a
-              href="#"
-              class="px-5 py-2 inline-block mt-2 primary-background text-white font-medium rounded-md text-xs"
-              >Join in telegram</a
-            >
+        <div
+          class="w-full flex flex-col md:flex-row gap-10 p-0 md:p-8 my-6 md:my-10"
+        >
+          <div
+            class="content-container flex justify-center items-center w-full"
+          >
+            <div class="content w-4/6">
+              <h1 class="text-4xl primary-color pb-4 font-extrabold">iSoft</h1>
+              <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
+                Carries the most up to date Web Technologies for Afghan Students
+              </h3>
+              <p class="text-sm text-gray-500 lg:pr-6 pb-6">
+                Our iWeb department with informative instructors have the
+                mission to carry out the best, high quality and up to date
+                concepts of web designing and web development principles.
+              </p>
+              <a
+                href="#"
+                class="px-5 py-2 inline-block mt-2 primary-background text-white font-medium rounded-md text-xs"
+                >Join in telegram</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="img-container flex justify-center items-center w-full">
-          <div class="img w-4/6 rounded-lg overflow-hidden primary-shadow">
-            <img src="../media/iSoft.png" alt="" />
+          <div class="img-container flex justify-center items-center w-full">
+            <div class="img w-4/6 rounded-lg overflow-hidden primary-shadow">
+              <img src="../media/iSoft.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -349,5 +381,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
