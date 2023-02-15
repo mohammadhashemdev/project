@@ -51,8 +51,14 @@
 
       #overlay {
         z-index: 80;
-        opacity: 0;
+        backdrop-filter: blur(4px);
+        background-color: rgba(0, 0, 0, 0.5);
         transition: all 0.5s ease-in-out;
+      }
+
+      .main-hidden {
+        visibility: hidden;
+        opacity: 0;
       }
     </style>
     <!-- <link href="/dist/output.css" rel="stylesheet" /> -->
@@ -167,7 +173,7 @@
         </div>
         <div
           id="overlay"
-          class="fixed md:hidden right-0 top-0 h-screen w-full bg-slate-800 hidden"
+          class="fixed md:hidden right-0 top-0 h-screen w-full main-hidden"
         ></div>
       </nav>
     </div>
