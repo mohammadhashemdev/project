@@ -8,16 +8,26 @@ const goToSection = function () {
   mobileNavbar.classList.add("translate-x-full");
 };
 
+const mobileNavClose = function () {
+  mobileNavbar.classList.toggle("translate-x-full");
+  overlay.classList.toggle("main-hidden");
+};
+
 mobileNavItems.forEach((item) => {
   item.addEventListener("click", goToSection);
 });
 
-navToggler.addEventListener("click", function (e) {
-  mobileNavbar.classList.toggle("translate-x-full");
-  overlay.classList.toggle("main-hidden");
-});
+navToggler.addEventListener("click", mobileNavClose);
+overlay.addEventListener("click", mobileNavClose);
 
-overlay.addEventListener("click", function (e) {
-  document.querySelector("#mobileNavbar").classList.toggle("translate-x-full");
-  overlay.classList.toggle("main-hidden");
+// owl carousel
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1,
+    },
+  },
 });

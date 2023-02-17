@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.primary-color {
+  color: #002d44;
+}
+
+.primary-background {
+  background-color: #002d44;
+  transition: 0.2s ease-in-out;
+}
+
+.primary-shadow {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.205);
+}
+
+.card-container {
+  min-height: 300px;
+}
+
+#mobileNavbar {
+  transition: transform 0.5s ease-in-out;
+  z-index: 90;
+}
+
+.togglerr {
+  cursor: pointer;
+  z-index: 100;
+}
+
+#overlay {
+  z-index: 80;
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+.main-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
