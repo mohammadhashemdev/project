@@ -18,6 +18,9 @@
     />
 
     <style type="text/tailwindcss">
+      html {
+        scroll-behavior: smooth;
+      }
       .primary-color {
         color: #002d44;
       }
@@ -25,10 +28,6 @@
       .primary-background {
         background-color: #002d44;
         transition: 0.2s ease-in-out;
-      }
-
-      .primary-background:hover {
-        background-color: #003f5f;
       }
 
       .primary-shadow {
@@ -90,8 +89,8 @@
         >
           <li><a href="#home">Home</a></li>
           <li><a href="#departments">Departments</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
 
         <div class="social-media hidden md:flex flex-row gap-3">
@@ -179,11 +178,10 @@
     </div>
 
     <section
+      id="home"
       class="h-screen container mx-auto px-4 md:px-8 lg:px-16 flex flex-row justify-center items-center font-poppins"
     >
-      <div
-        class="hero-content-container w-full lg:w-1/2 text-center lg:text-start"
-      >
+      <div class="w-full lg:w-1/2 text-center lg:text-start">
         <h3 class="font-poppins font-semibold text-slate-500 text-md my-4">
           WELCOME TO ISOURCE
         </h3>
@@ -208,16 +206,14 @@
       </div>
     </section>
 
-    <section class="bg-slate-100">
+    <section id="departments" class="bg-slate-100">
       <div
         class="container mx-auto flex flex-col text-center font-poppins lg:text-start gap-6 mb-10"
       >
         <div
           class="w-full flex flex-col md:flex-row-reverse gap-10 p-0 lg:p-8 my-6 lg:my-10"
         >
-          <div
-            class="content-container flex justify-center items-center w-full"
-          >
+          <div class="flex justify-center items-center w-full">
             <div class="content w-4/6">
               <h1 class="text-4xl primary-color pb-4 font-extrabold">iWeb</h1>
               <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
@@ -245,9 +241,7 @@
         <div
           class="w-full flex flex-col md:flex-row gap-10 p-0 md:p-8 my-6 md:my-10"
         >
-          <div
-            class="content-container flex justify-center items-center w-full"
-          >
+          <div class="flex justify-center items-center w-full">
             <div class="content w-4/6">
               <h1 class="text-4xl primary-color pb-4 font-extrabold">iNet</h1>
               <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
@@ -275,9 +269,7 @@
         <div
           class="w-full flex flex-col md:flex-row-reverse gap-10 p-0 md:p-8 my-6 md:my-10"
         >
-          <div
-            class="content-container flex justify-center items-center w-full"
-          >
+          <div class="flex justify-center items-center w-full">
             <div class="content w-4/6">
               <h1 class="text-4xl primary-color pb-4 font-extrabold">iSec</h1>
               <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
@@ -305,9 +297,7 @@
         <div
           class="w-full flex flex-col md:flex-row gap-10 p-0 md:p-8 my-6 md:my-10"
         >
-          <div
-            class="content-container flex justify-center items-center w-full"
-          >
+          <div class="flex justify-center items-center w-full">
             <div class="content w-4/6">
               <h1 class="text-4xl primary-color pb-4 font-extrabold">iSoft</h1>
               <h3 class="text-base font-bold lg:pr-8 text-gray-500 py-4">
@@ -334,9 +324,7 @@
       </div>
     </section>
 
-    <section
-      class="container mx-auto flex flex-col justify-around items-center gap-2 font-poppins my-10"
-    >
+    <section id="reviews" class="container mx-auto font-poppins my-10">
       <h1
         class="font-bold md:font-extrabold text-xl md:text-2xl primary-color py-4 my-10 text-center"
       >
@@ -373,13 +361,57 @@
 
       <div class="flex justify-center items-center gap-2 p-4 my-7">
         <div
-          class="h-2 w-2 rounded-full border border-slate-800 bg-slate-800"
+          class="slider-btns h-2 w-2 rounded-full border border-slate-800 bg-slate-800"
         ></div>
-        <div class="h-2 w-2 rounded-full border border-slate-800"></div>
-        <div class="h-2 w-2 rounded-full border border-slate-800"></div>
-        <div class="h-2 w-2 rounded-full border border-slate-800"></div>
+        <div
+          class="slider-btns h-2 w-2 rounded-full border border-slate-800"
+        ></div>
+        <div
+          class="slider-btns h-2 w-2 rounded-full border border-slate-800"
+        ></div>
+        <div
+          class="slider-btns h-2 w-2 rounded-full border border-slate-800"
+        ></div>
       </div>
     </section>
+
+    <footer class="primary-background font-poppins text-white">
+      <div
+        class="container flex flex-col gap-6 justify-between mx-auto py-4 px-4 md:px-8 lg:px-16"
+      >
+        <div>
+          <h1 class="font-semibold text-2xl">iSource</h1>
+          <p class="text-sm">Online Mentorship & Training Center</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="social-media flex flex-row gap-3">
+            <a href="#"
+              ><div
+                class="h-8 w-8 bg-slate-200 hover:bg-slate-300 transition-all ease-in-out primary-color rounded-full flex justify-center items-center"
+              >
+                <i class="fa-brands fa-facebook-f"></i></div
+            ></a>
+            <a href="#"
+              ><div
+                class="h-8 w-8 bg-slate-200 hover:bg-slate-300 transition ease-in-out primary-color rounded-full flex justify-center items-center"
+              >
+                <i class="fa-brands fa-youtube"></i></div
+            ></a>
+            <a href="#"
+              ><div
+                class="h-8 w-8 bg-slate-200 hover:bg-slate-300 transition ease-in-out primary-color rounded-full flex justify-center items-center"
+              >
+                <i class="fa-brands fa-telegram"></i></div
+            ></a>
+          </div>
+
+          <div class="text-sm">
+            <p>iSourceTech &copy; 2023</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
