@@ -31,6 +31,7 @@
       referrerpolicy="no-referrer"
     />
     <link href="style.css" rel="stylesheet" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -46,7 +47,7 @@
   </head>
 
   <body>
-    <div class="w-full md:border-b fixed backdrop-blur-lg">
+    <div class="w-full md:border-b backdrop-blur-lg fixed z-10">
       <nav
         class="container mx-auto flex flex-row justify-between py-2 px-4 md:px-8 lg:px-16"
       >
@@ -296,12 +297,150 @@
 
     <section id="reviews" class="container mx-auto font-poppins my-10">
       <h1
-        class="font-bold md:font-extrabold text-xl md:text-2xl primary-color py-4 my-10 text-center"
+        class="font-bold md:font-extrabold text-xl md:text-2xl primary-color py-4 my-5 text-center"
       >
         Students Comments
       </h1>
 
-      <div
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div
+            class="w-2/3 lg:w-3/4 mx-auto rounded-2xl primary-shadow overflow-hidden my-10"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div
+                class="w-full md:w-1/3 lg:w-1/5 shrink-0 md:h-44 h-44 flex justify-center items-center"
+              >
+                <div
+                  class="w-24 h-24 md:w-full md:h-full md:rounded-none rounded-full overflow-hidden"
+                >
+                  <img
+                    class="h-44 object-cover"
+                    src="../media/smile.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between">
+                <p class="text-xs text-gray-400 pb-2">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Nulla consequatur, Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Nulla consequatur, Lorem ipsum dolor Lorem
+                  ipsum dolorLorem ipsum dolor"
+                </p>
+                <div class="text-xs text-end">
+                  <p class="font-bold text-gray-600">Angelina Elizabeth</p>
+                  <p class="text-gray-400">iNet Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div
+            class="w-2/3 lg:w-3/4 mx-auto rounded-2xl primary-shadow overflow-hidden my-10"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div
+                class="w-full md:w-1/3 lg:w-1/5 shrink-0 md:h-44 h-44 flex justify-center items-center"
+              >
+                <div
+                  class="w-24 h-24 md:w-full md:h-full md:rounded-none rounded-full overflow-hidden"
+                >
+                  <img
+                    class="h-44 object-cover"
+                    src="../media/smile2.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between">
+                <p class="text-xs text-gray-400 pb-2">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Nulla consequatur, Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Nulla consequatur, Lorem ipsum dolor Lorem
+                  ipsum dolorLorem ipsum dolor"
+                </p>
+                <div class="text-xs text-end">
+                  <p class="font-bold text-gray-600">Shams Hakimi</p>
+                  <p class="text-gray-400">iWeb Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div
+            class="w-2/3 lg:w-3/4 mx-auto rounded-2xl primary-shadow overflow-hidden my-10"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div
+                class="w-full md:w-1/3 lg:w-1/5 shrink-0 md:h-44 h-44 flex justify-center items-center"
+              >
+                <div
+                  class="w-24 h-24 md:w-full md:h-full md:rounded-none rounded-full overflow-hidden"
+                >
+                  <img
+                    class="h-44 object-cover"
+                    src="../media/smile.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between">
+                <p class="text-xs text-gray-400 pb-2">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Nulla consequatur, Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Nulla consequatur, Lorem ipsum dolor Lorem
+                  ipsum dolorLorem ipsum dolor"
+                </p>
+                <div class="text-xs text-end">
+                  <p class="font-bold text-gray-600">Rebecca Black</p>
+                  <p class="text-gray-400">iSoft Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div
+            class="w-2/3 lg:w-3/4 mx-auto rounded-2xl primary-shadow overflow-hidden my-10"
+          >
+            <div class="flex flex-col md:flex-row">
+              <div
+                class="w-full md:w-1/3 lg:w-1/5 shrink-0 md:h-44 h-44 flex justify-center items-center"
+              >
+                <div
+                  class="w-24 h-24 md:w-full md:h-full md:rounded-none rounded-full overflow-hidden"
+                >
+                  <img
+                    class="h-44 object-cover"
+                    src="../media/smile2.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="p-6 flex flex-col justify-between">
+                <p class="text-xs text-gray-400 pb-2">
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Nulla consequatur, Lorem ipsum dolor sit, amet consectetur
+                  adipisicing elit. Nulla consequatur, Lorem ipsum dolor Lorem
+                  ipsum dolorLorem ipsum dolor"
+                </p>
+                <div class="text-xs text-end">
+                  <p class="font-bold text-gray-600">Haider Masoud</p>
+                  <p class="text-gray-400">iSec Student</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div
         class="w-2/3 lg:w-3/4 mx-auto rounded-2xl primary-shadow overflow-hidden"
       >
         <div class="flex flex-col md:flex-row">
@@ -342,9 +481,10 @@
         <div
           class="slider-btns h-2 w-2 rounded-full border border-slate-800"
         ></div>
-      </div>
+      </div> -->
     </section>
 
+    <!-- FOOTER -->
     <footer
       class="primary-background font-poppins text-white text-center md:text-start"
     >

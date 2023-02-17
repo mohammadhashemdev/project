@@ -24,6 +24,9 @@ overlay.addEventListener("click", mobileNavClose);
 $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 10,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
   nav: false,
   responsive: {
     0: {
