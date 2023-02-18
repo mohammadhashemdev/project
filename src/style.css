@@ -16,6 +16,14 @@ html {
   transition: 0.2s ease-in-out;
 }
 
+.btn-primary {
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #004e75;
+}
+
 .primary-shadow {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.205);
 }
